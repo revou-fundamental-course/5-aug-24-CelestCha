@@ -1,1 +1,57 @@
 /* Ini CSS */
+.main-title {
+    text-align: center;
+}
+
+main {
+    display: flex;
+}
+
+form {
+    padding: 12px;
+    background-color: lightpink;
+}
+
+aside {
+    margin: 48px;
+
+}
+
+.form-button-container {
+    margin-top: 24px;
+    margin-bottom: 16px;
+}
+
+.bg-pink {
+    height: 32px;
+    color: cornsilk;
+    border: 1px solid;
+    border-radius: 8px;
+    background-color: hotpink;
+    
+}
+
+.bg-reset {
+    height: 32px;
+    
+    border: 1px solid;
+    border-radius: 8px;
+    background-color: lightcoral;
+    color: cornsilk;
+}
+
+input[type=number] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    font-family: monospace;
+    font-size: 14px;
+  }
+
+  footer {
+    text-align: center;
+  }
