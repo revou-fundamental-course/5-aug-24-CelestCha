@@ -7,14 +7,14 @@ main {
     display: flex;
 }
 
+.form-section, .result-section {
+    margin: 48px;
+}
+
 form {
     padding: 12px;
     background-color: lightpink;
-}
-
-aside {
-    margin: 48px;
-
+    border-radius: 8px;
 }
 
 .form-button-container {
@@ -45,13 +45,73 @@ input[type=number] {
     padding: 12px 20px;
     margin: 8px 0;
     display: inline-block;
-    border: 1px solid #ccc;
+    border: 1px solid lightpink;
     border-radius: 4px;
     box-sizing: border-box;
     font-family: monospace;
     font-size: 14px;
-  }
+}
 
-  footer {
+footer {
     text-align: center;
-  }
+}
+
+.hasil-container {
+    background-color: lightpink;
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+}
+
+.hasil-container h2 {
+    margin-top: 0;
+    font-size: 1.5rem;
+}
+
+.hasil-container h1 {
+    font-size: 3rem;
+    margin-bottom: 10px;
+}
+
+.hasil-container p {
+    font-size: 1rem;
+    margin-bottom: 48px;
+}
+
+.bg-download {
+    background-color: lightpink;
+    color: lightpink;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.bg-download:hover {
+    background-color: lightpink;
+}
+
+.bg-konsultasi {
+    background-color: lightpink; /* Hijau */
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.bg-konsultasi:hover {
+    background-color: lightpink; /* Hijau lebih gelap */
+}
+
+.bg-registrasi {
+    background-color: lightpink; /* Merah */
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color lightpink;
+}
