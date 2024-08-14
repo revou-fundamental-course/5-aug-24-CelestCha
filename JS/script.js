@@ -1,41 +1,48 @@
-// Ini JavaScript
-var tampilHasilBMI = false; // Variabel untuk menyimpan status tampilan hasil BMI
+var tampilHasilBMI = false;
 
 function hitungBMI() {
     var beratBadan = parseFloat(document.getElementById("beratBadan").value);
     var tinggiBadan = parseFloat(document.getElementById("tinggiBadan").value);
-    
+    var jenisKelamin = document.querySelector('input[name="Jenis-kelamin"]:checked');
+    var usia = parseFloat(document.getElementById("usia").value);
+
+    if (!jenisKelamin) {
+        alert("Silakan pilih jenis kelamin.");
+        return;
+    }
+
     var bmi = (beratBadan / ((tinggiBadan / 100) * (tinggiBadan / 100))).toFixed(2);
 
     document.getElementById("hasil-bmi").textContent = bmi;
-    
+
+    var hasilDeskripsi = "";
+    var hasilKeterangan = "";
+
+    if (bmi < 18.5) {
+        hasilDeskripsi = "Kekurangan Berat Badan";
+        hasilKeterangan = "Anda mengalami kekurangan berat badan.";
+    } else if (bmi >= 18.5 && bmi <= 24.9) {
+        hasilDeskripsi = "Normal (Ideal)";
+        hasilKeterangan = "Anda memiliki berat badan normal (ideal).";
+    } else if (bmi >= 25 && bmi <= 29.9) {
+        hasilDeskripsi = "Berat Badan Lebih";
+        hasilKeterangan = "Anda mengalami kelebihan berat badan.";
+    } else if (bmi >= 30) {
+        hasilDeskripsi = "Kegemukan (Obesitas)";
+        hasilKeterangan = "Anda mengalami kegemukan (obesitas). Obesitas adalah kondisi medis yang serius yang dapat menyebabkan berbagai masalah kesehatan, termasuk penyakit jantung, stroke, diabetes, dan kanker. Jika Anda mengalami obesitas, penting untuk berbicara dengan dokter Anda tentang cara menurunkan berat badan dengan aman dan efektif.";
+    }
+
+    var keterangan = jenisKelamin.value === "Laki-laki" ? "Laki-laki" : "Perempuan";
+    keterangan += ", usia " + usia + " tahun";
+
+    document.getElementById("hasil-deskripsi").textContent = hasilDeskripsi;
+    document.getElementById("hasil-keterangan").textContent = hasilKeterangan;
+    document.getElementById("hasil-keterangan-detail").textContent = "Hasil BMI: " + bmi + " - " + keterangan;
 
     if (!tampilHasilBMI) {
         var hasilBMI = document.getElementById("hasilBMI");
-        hasilBMI.style.display = "block"; // Menampilkan hasil BMI
-        tampilHasilBMI = true; // Mengubah status tampilan menjadi true
-    }
-
-    if (bmi < 18.5) {
-        document.getElementById("hasil-deskripsi").textContent = "Kekurangan Berat Badan";
-        document.getElementById("hasil-keterangan").textContent = "Anda mengalami kekurangan berat badan.";
-        document.getElementById("hasil-keterangan-detail").textContent = "Hasil BMI di antara 18.5 dan 22.9";
-        document.getElementById("hasil-judul").textContent = "Hasil";
-    } else if (bmi >= 18.5 && bmi <= 24.9) {
-        document.getElementById("hasil-deskripsi").textContent = "Normal (Ideal)";
-        document.getElementById("hasil-keterangan").textContent = "Anda memiliki berat badan normal (ideal).";
-        document.getElementById("hasil-keterangan-detail").textContent = "Hasil BMI di antara 18.5 dan 24.9";
-        document.getElementById("hasil-judul").textContent = "Hasil";
-    } else if (bmi >= 25 && bmi <= 29.9) {
-        document.getElementById("hasil-deskripsi").textContent = "Berat Badan Lebih";
-        document.getElementById("hasil-keterangan").textContent = "Anda mengalami kelebihan berat badan.";
-        document.getElementById("hasil-keterangan-detail").textContent = "Hasil BMI di antara 25 dan 29.9";
-        document.getElementById("hasil-judul").textContent = "Hasil";
-    } else if (bmi >= 30) {
-        document.getElementById("hasil-deskripsi").textContent = "Kegemukan (Obesitas)";
-        document.getElementById("hasil-keterangan").textContent = "Anda mengalami kegemukan (obesitas). Obesitas adalah kondisi medis yang serius yang dapat menyebabkan berbagai masalah kesehatan, termasuk penyakit jantung, stroke, diabetes, dan kanker. Jika Anda mengalami obesitas, penting untuk berbicara dengan dokter Anda tentang cara menurunkan berat badan dengan aman dan efektif.";
-        document.getElementById("hasil-keterangan-detail").textContent = "Hasil BMI di antara 30 dan lebih";
-        document.getElementById("hasil-judul").textContent = "Hasil";
+        hasilBMI.style.display = "block";
+        tampilHasilBMI = true;
     }
 }
 
@@ -49,10 +56,7 @@ function resetForm() {
     document.getElementById("hasil-keterangan-detail").textContent = "";
     document.getElementById("hasil-judul").textContent = "Hasil";
 
-    // Hide the result only when the reset button is clicked
-    if (tampilHasilBMI) {
-        var hasilBMI = document.getElementById("hasilBMI");
-        hasilBMI.style.display = "none"; // Sembunyikan hasil BMI hanya saat tombol reset ditekan
-        tampilHasilBMI = false; // Mengubah status tampilan menjadi false
-    }
+    var hasilBMI = document.getElementById("hasilBMI");
+    hasilBMI.style.display = "none";
+    tampilHasilBMI = false;
 }

@@ -115,3 +115,9 @@ footer {
     cursor: pointer;
     transition: background-color lightpink;
 }
+
+@media only screen and (max-width: 480px) {
+    main {
+        flex-direction: column;
+    }
+}
