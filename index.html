@@ -14,38 +14,47 @@
 
     <main>
         <aside class="form-section">
+
+            <!--Artikel untuk pesan motivasi-->
             <article>
                 <p>Kamu selalu cantik. Sekarang kamu hanya memutuskan untuk menjadi lebih sehat, lebih bugar, lebih cepat, dan lebih kuat. Ingatlah itu!</p>
             </article>
     
             <form>
+
+                 <!--Input Jenis Kelamin-->
                 <div>
                     <h3>Jenis Kelamin</h3>
                     <input type="radio" id="Laki-laki" name="Jenis-kelamin" value="Laki-laki"><label for="Laki-laki">Laki-laki</label>
                     <input type="radio" id="Perempuan" name="Jenis-kelamin" value="Perempuan"><label for="Perempuan">Perempuan</label>
                 </div>
     
+                <!--Input Berat Badan-->
                 <div>
                     <h3>Berat Badan (kg)</h3>
                     <input type="number" id="beratBadan" required>
                 </div>
-    
+
+                <!--Input Usia-->
                 <div>
                     <h3>Usia (tahun)</h3>
                     <input type="number" id="usia" required>
                 </div>
-    
+
+                <!--Input Tinggi Badan-->
                 <div>
                     <h3>Tinggi Badan (cm)</h3>
                     <input type="number" id="tinggiBadan" required>
                 </div>
-    
+
+                <!--Tombol Hitung BMI dan Reset-->
                 <div class="form-button-container">
                     <button type="button" class="button bg-pink" onclick="hitungBMI()">Hitung BMI</button>
                     <button type="button" class="button bg-reset" onclick="resetForm()">Reset</button>
                 </div>
             </form>
-    
+
+            <!--Informasi Form BMI-->
             <article>
                 <header>
                     <h2 class="form-information">Form Information</h2>
@@ -55,7 +64,7 @@
 
                         Rumusnya gampang banget, kok:
                         
-                        [Berat badan (kg) / tinggi badan (cm) / tinggi badan (cm)] × 10.000 = BMI
+                        [Berat badan (kg) / tinggi badan (cm) / tinggi badan (cm)] x 10.000 = BMI
                         
                         Jadi, pertama-tama, kamu harus tahu berat badan dan tinggi badanmu dalam kilogram dan sentimeter.  Setelah dapat nilai BMI-nya, kamu bisa bandingkan dengan kategori ini:
                         
@@ -64,7 +73,7 @@
                         - BMI antara 25 dan 29,9:  Hmm, sepertinya kamu perlu sedikit mengurangi asupan kalori. 
                         - BMI 30 atau lebih:  Waktunya untuk hidup sehat! Konsultasi dengan dokter atau ahli gizi, ya!
                         
-                        Ingat, BMI cuma salah satu cara untuk ngecek kesehatanmu.  Faktor lain seperti proporsi otot dan lemak tubuh juga penting.  Jadi, jangan terlalu fokus sama angka BMI, tapi fokuslah untuk hidup sehat dan bahagia!</p>
+                        Ingat, BMI cuma salah satu cara untuk ngecek kesehatanmu.  Faktor lain seperti proporsi otot dan lemak tubuh juga penting.  Jadi, jangan terlalu fokus sama angka BMI, tapi fokuslah untuk hidup sehat dan bahagia!</p>
             </article>
     
 

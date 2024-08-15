@@ -50,6 +50,10 @@ form {
     
 }
 
+#hasilBMI {
+    scroll-behavior: smooth;
+}
+
 .bg-reset {
     height: 32px;
     
@@ -77,6 +81,8 @@ footer {
     border-radius: 15px;
     background-color: lightpink;
 }
+
+
 
 .hasil-container {
     background-color: lightpink;
