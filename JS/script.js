@@ -1,3 +1,4 @@
+
 function hitungBMI() {
     var beratBadan = parseFloat(document.getElementById("beratBadan").value);
     var tinggiBadan = parseFloat(document.getElementById("tinggiBadan").value);
@@ -41,8 +42,12 @@ function hitungBMI() {
         var hasilBMI = document.getElementById("hasilBMI");
         hasilBMI.style.display = "block";
         tampilHasilBMI = true;
+
+        
     }
 }
+
+
 
 function resetForm() {
     document.getElementById("beratBadan").value = "";
@@ -52,7 +57,7 @@ function resetForm() {
     document.getElementById("hasil-deskripsi").textContent = "";
     document.getElementById("hasil-keterangan").textContent = "";
     document.getElementById("hasil-keterangan-detail").textContent = "";
-    document.getElementById("hasil-judul").textContent = "Hasil"; // Add this line to reset the title too
+    document.getElementById("hasil-judul").textContent = "Hasil"; 
 
     var hasilBMI = document.getElementById("hasilBMI");
     hasilBMI.style.display = "none";
@@ -64,3 +69,4 @@ function resetForm() {
         radioButtons[i].checked = false;
     }
 }
+

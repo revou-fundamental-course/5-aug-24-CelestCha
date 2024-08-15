@@ -104,8 +104,8 @@ footer {
 }
 
 .bg-download {
-    background-color: lightpink;
-    color: black;
+    background-color: lightcoral;
+    color: cornsilk;
     padding: 10px 20px;
     border: none;
     border-radius: 4px;
@@ -115,13 +115,14 @@ footer {
 }
 
 .bg-download:hover {
-    background-color: lightpink;
+    background-color: lightcoral;
+    color: cornsilk;
     box-shadow: 0 2px 4px rgba(0, 0, 0.1);
 }
 
 .bg-konsultasi {
-    background-color: lightpink; /* Hijau */
-    color: black;
+    background-color: lightcoral;
+    color: cornsilk;
     padding: 10px 20px;
     border: none;
     border-radius: 4px;
@@ -136,7 +137,7 @@ footer {
 }
 
 .bg-registrasi {
-    background-color: lightpink; /* Merah */
+    background-color: lightpink; 
     color: white;
     padding: 10px 20px;
     border: none;
@@ -144,6 +145,19 @@ footer {
     cursor: pointer;
     transition: background-color lightpink;
     box-shadow: 0 2px 4px rgba(0, 0, 0.1);
+}
+
+.result-details {
+    background: #f8f8ff;
+    padding: 20px;
+    border-radius: 15px;
+    border: 2px solid #ccc;
+    margin-top: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0.1);
+}
+
+.result-description {
+    margin-top: 10px;
 }
 
 @media only screen and (max-width: 480px) {
