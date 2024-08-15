@@ -1,5 +1,3 @@
-var tampilHasilBMI = false;
-
 function hitungBMI() {
     var beratBadan = parseFloat(document.getElementById("beratBadan").value);
     var tinggiBadan = parseFloat(document.getElementById("tinggiBadan").value);
@@ -42,8 +40,8 @@ function hitungBMI() {
     if (!tampilHasilBMI) {
         var hasilBMI = document.getElementById("hasilBMI");
         hasilBMI.style.display = "block";
-        tampilHasilBMI = true;
-    }
+        tampilHasilBMI = true;
+    }
 }
 
 function resetForm() {
@@ -54,9 +52,15 @@ function resetForm() {
     document.getElementById("hasil-deskripsi").textContent = "";
     document.getElementById("hasil-keterangan").textContent = "";
     document.getElementById("hasil-keterangan-detail").textContent = "";
-    document.getElementById("hasil-judul").textContent = "Hasil";
+    document.getElementById("hasil-judul").textContent = "Hasil"; // Add this line to reset the title too
 
     var hasilBMI = document.getElementById("hasilBMI");
     hasilBMI.style.display = "none";
     tampilHasilBMI = false;
+
+    // Reset radio button
+    var radioButtons = document.getElementsByName("Jenis-kelamin");
+    for (var i = 0; i < radioButtons.length; i++) {
+        radioButtons[i].checked = false;
+    }
 }

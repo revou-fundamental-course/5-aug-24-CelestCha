@@ -1,6 +1,15 @@
 /* Ini CSS */
+header {
+    background-color: lightpink;
+    padding: 20px;
+    text-align: center;
+    color: white;
+}
+
 .main-title {
     text-align: center;
+    font-size: 2rem;
+
 }
 
 main {
@@ -8,10 +17,15 @@ main {
 }
 
 .form-section, .result-section {
+    background: #f8f8ff;
+    padding: 20px;
+    border-radius: 10px;
     margin: 48px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0.1);
 }
 
 form {
+    margin-top: 20px;
     padding: 12px;
     background-color: lightpink;
     border-radius: 8px;
@@ -61,6 +75,7 @@ footer {
     padding: 20px;
     border-radius: 8px;
     text-align: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0.1);
 }
 
 .hasil-container h2 {
@@ -80,30 +95,34 @@ footer {
 
 .bg-download {
     background-color: lightpink;
-    color: lightpink;
+    color: black;
     padding: 10px 20px;
     border: none;
     border-radius: 4px;
     cursor: pointer;
     transition: background-color 0.3s ease;
+    box-shadow: 0 2px 4px rgba(0, 0, 0.1);
 }
 
 .bg-download:hover {
     background-color: lightpink;
+    box-shadow: 0 2px 4px rgba(0, 0, 0.1);
 }
 
 .bg-konsultasi {
     background-color: lightpink; /* Hijau */
-    color: white;
+    color: black;
     padding: 10px 20px;
     border: none;
     border-radius: 4px;
     cursor: pointer;
     transition: background-color 0.3s ease;
+    box-shadow: 0 2px 4px rgba(0, 0, 0.1);
 }
 
 .bg-konsultasi:hover {
-    background-color: lightpink; /* Hijau lebih gelap */
+    background-color: lightpink;
+    box-shadow: 0 2px 4px rgba(0, 0, 0.1);
 }
 
 .bg-registrasi {
@@ -114,10 +133,16 @@ footer {
     border-radius: 4px;
     cursor: pointer;
     transition: background-color lightpink;
+    box-shadow: 0 2px 4px rgba(0, 0, 0.1);
 }
 
 @media only screen and (max-width: 480px) {
     main {
-        flex-direction: column;
-    }
+        flex-direction: column;
+    }
 }
+
+.hasil-container {
+    display: block;
+}
+
