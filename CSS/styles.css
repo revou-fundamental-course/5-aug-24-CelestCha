@@ -76,6 +76,8 @@ footer {
     border-radius: 8px;
     text-align: center;
     box-shadow: 0 2px 4px rgba(0, 0, 0.1);
+    overflow-y: scroll;
+    max-height: 300px;
 }
 
 .hasil-container h2 {
@@ -139,7 +141,7 @@ footer {
 @media only screen and (max-width: 480px) {
     main {
         flex-direction: column;
-    }
+}
 }
 
 .hasil-container {
